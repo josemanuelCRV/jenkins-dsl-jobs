@@ -13,7 +13,7 @@ multibranchPipelineJob('example') {
     }
     orphanedItemStrategy {
         discardOldItems {
-            numToKeep(20)
+            numToKeep(2)
         }
     }
 }
