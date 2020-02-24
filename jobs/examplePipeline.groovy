@@ -10,7 +10,7 @@ multibranchPipelineJob('example') {
 
     branchSources {
         git {
-            id(uuid)
+            id = UUID.nameUUIDFromBytes(repo.getBytes())
             remote('https://github.com/josemanuelCRV/octo-repo.git')
         }
     }
