@@ -1,5 +1,7 @@
 #!groovy
 
+UUID uuid = UUID.fromString("dd847135-8391-4f66-a54c-7f8781dc3119")
+
 multibranchPipelineJob('example') {
 
     triggers {
@@ -8,6 +10,7 @@ multibranchPipelineJob('example') {
 
     branchSources {
         git {
+            id(uuid)
             remote('https://github.com/josemanuelCRV/octo-repo.git')
         }
     }
