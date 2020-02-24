@@ -2,6 +2,8 @@
 
 multibranchPipelineJob('example') {
 
+    def repo = 'https://github.com/josemanuelCRV/octo-repo.git'
+
     triggers {
         periodic(1)
     }
@@ -9,7 +11,7 @@ multibranchPipelineJob('example') {
     branchSources {
         git {
             id = UUID.nameUUIDFromBytes(repo.getBytes())
-            remote('https://github.com/josemanuelCRV/octo-repo.git')
+            remote(repo)
         }
     }
     orphanedItemStrategy {
