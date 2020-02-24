@@ -6,9 +6,14 @@ multibranchPipelineJob('example') {
         periodic(1)
     }
 
+    authorization {
+        
+    }
+
     branchSources {
-        git {
-            remote('https://github.com/josemanuelCRV/octo-repo.git')
+        github {
+            repoOwner('josemanuelCRV')
+            repository('octo-repo.git')
         }
     }
     orphanedItemStrategy {
