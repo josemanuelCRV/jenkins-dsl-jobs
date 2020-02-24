@@ -1,7 +1,5 @@
 #!groovy
 
-UUID uuid = UUID.fromString("dd847135-8391-4f66-a54c-7f8781dc3119")
-
 multibranchPipelineJob('example') {
 
     triggers {
